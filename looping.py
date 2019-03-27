@@ -1,7 +1,7 @@
 # 25. take a number from the user and check whether it is prime?
 
 number = int(input("Enter a number:"))
-for i in range(2,number):
+for i in range(2, number):
     if number % i == 0:
         print("Its not a prime no.")
         break
@@ -11,7 +11,7 @@ else:
 # 26. take a string from the user and check contains only digits or not?
 
 string = input("Enter a string: ")
-if string.isnumeric() == True:
+if string.isnumeric():
     print("yes its all digits.")
 else:
     print("no it contains characters.")
@@ -19,7 +19,7 @@ else:
 # 27. take a string from the user and check contains only  alphabets or not?
 
 string = input("Enter a string: ")
-if string.isalpha() == True:
+if string.isalpha():
     print("Its all alphabets.")
 else:
     print("It contains digits.")
@@ -27,15 +27,15 @@ else:
 # 28. take a string from the user and check contains only  special chars or not?
 
 string = input("Enter a string: ")
-if string.isalnum() == True:
+if string.isalnum():
     print("Its contains alphanumeric values.")
 else:
     print("It contains all special characters.")
 
-29.take a string from the user and check contains only  capital letters or not?
+# 29.take a string from the user and check contains only  capital letters or not?
 
 string = input("Enter a string: ")
-if string.isupper() == True:
+if string.isupper():
     print("Its contains all capitals.")
 else:
     print("It contains lowercase.")
@@ -43,7 +43,7 @@ else:
 # 30.take a string from the user and check contains only  small letters or not?
 #
 string = input("Enter a string: ")
-if string.islower() == True:
+if string.islower():
     print("Its contains all lowercase.")
 else:
     print("It contains uppercase.")
@@ -54,10 +54,10 @@ string = "Mymymymymymymymymy"
 l = string.rfind("my", 3)
 print(l)
 
-32. WAP to checfhmdk given string contains numbers or not. it should consider float numbers also.
+# 32. WAP to check given string contains numbers or not. it should consider float numbers also.
 
 string = input("Enter a string: ")
-if string.isalpha() == True:
+if string.isalpha():
     print("Its all alphabets.")
 else:
     print("It contains digits.")
@@ -109,10 +109,10 @@ while user_choice != "4":
     user_choice = input("Menu: \n 1. windows \n 2.Linux \n 3. Mac \n 4. quit \n Enter your choice:")
     if user_choice == "1":
         print("You have selected windows.")
-    elif(user_choice == "2"):
+    elif user_choice == "2":
         print("You have selected Linux.")
-    elif(user_choice == "3"):
-        print("you have seleted MAc.")
+    elif user_choice == "3":
+        print("you have selected MAc.")
     else:
         print('Enter a valid choice.')
 print("Thank you for using the app.")
@@ -168,14 +168,13 @@ while count != 100:
         count += 1
     i += 1
 
-# 42. Determine the factors of a number entered  by the user
+# 42. Determinimume the factors of a number entered  by the user
 
 number = int(input("Enter the number you wish to find factors for: "))
 
 for i in range(1,number+1):
     if number % i == 0:
         print(i)
-
 
 
 # 43. Play a number guessing game (User enters a guess, you print YES or Higher or Lower). This should continue
@@ -217,13 +216,13 @@ except:
     print("Enter a valid input.")
 
 
-# 45. Find the sum of all the multiples of 3 or 5 below 1000
+# 45. Find the summation of all the multiples of 3 or 5 below 1000
 #
-sum = 0
+summation = 0
 for i in range(1000):
     if (i % 3 == 0) or (i % 5 == 0):
-        sum += i
-print(sum)
+        summation += i
+print(summation)
 
 
 # 46. Write a program to find out big of two numbers
@@ -248,6 +247,7 @@ print("The biggest value is:", number[-1])
 # 48. find out third occurrence of given substring
 # 49. find out nth occurrence of given substring
 
+
 def findnth(string, substring, n):
     temp = string.split(substring, n)
     print((temp[-1]))
@@ -258,23 +258,21 @@ def findnth(string, substring, n):
         return len(string)-len(temp[-1])-len(substring)
 
 
+# 50. Take some single digit numbers from the user and findout minimum, maximumimum, summation, average
 
-
-# 50. Take some single digit numbers from the user and findout min, maximum, sum, average
-#
 n = int(input("Enter the count of numbers you want to operate on: "))
-min = 10000
-max = 0
-sum = 0
+minimum = 10000
+maximum = 0
+summation = 0
 for i in range(n):
     user_number = float(input("Enter a number: "))
-    sum = sum + user_number
-    if max < user_number:
-        max = user_number
-    if min > user_number:
-        min = user_number
-average = sum / n
-print(f"Sum={sum}\nAverage = {average}\nMinimum = {min}\nMaximum = {max}")
+    summation = summation + user_number
+    if maximum < user_number:
+        maximum = user_number
+    if minimum > user_number:
+        minimum = user_number
+average = summation / n
+print(f"summation={summation}\nAverage = {average}\nminimum = {minimum}\nmaximum = {maximum}")
 
 # 51. WAP> 10 -> 000010
 #        		100 ->  000100
@@ -285,15 +283,16 @@ string = input("Enter the string:")
 print(string.zfill(6))
 
 
-
 # 52. names  ="emp1,emp2,emp3,emp4" iterate through the employee names.
 
-names  ="emp1,emp2,emp3,emp4"
+names = "emp1,emp2,emp3,emp4"
 list_names = names.split(",")
 for i in list_names:
     print(i)
 
-# 53. Take actual string, source string, destination string. replce first nth occurrences of source string with destination string of actual string.
+
+# 53. Take actual string, source string, destination string. replce first nth occurrences of source string
+# with destination string of actual string.
 
 actual_string = input("Enter a string: ")
 source_string = input("Entyer a string to be replaced: ")
@@ -311,20 +310,23 @@ print(new_string)
 # 5. pow    a**b
 # 6.subtraction
 # After selection do the corresponding operation.
-# Note: user may give int, or float numbers. You should check whether it is proper digits or not. I.e the user given string should be in the position to convert to float.
+# Note: user may give int, or float numbers. You should check whether it is proper digits or not.
+# I.e the user given string should be in the position to convert to float.
 # Other wise show the “inproper string given” Error.
 
 import math
 while True:
     try:
         no1 = float(input("Enter no1: "))
-        no2 = float(input("Enter no2: "))
-    except:
+        no2 = float(input("Enter no 2: "))
+    except ValueError:
         print("Enter a number common!")
-    enter_choice = int(input("1. addition\n 2. multiples\n3.division\n4.sqrt\n5. pow\n6.subtraction\nanything else to quit: "))
+
+    enter_choice = int(input("1. addition\n 2. multiples\n3.division\n4.sqrt\n5. pow\n6.subtraction"
+                             "\nanything else to quit: "))
     if enter_choice == 1:
         print("addition: ", no1+no2)
-        # continue
+        continue
     elif enter_choice == 2:
         print("Multiplication: ", no1*no2)
         continue
@@ -352,7 +354,7 @@ print("Thank you")
 # there and how many prime numbers are there and how many perfect numbers are there and how many Armstrong numbers are
 # there and how many palindrome numbers are there.
 
-l=[1,2,3,5,7,8,9,10,11,12,13,20,22,23,24,25,26,27,20,21,22,4]
+l1 = [1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 20, 22, 23, 24, 25, 26, 27, 20, 21, 22, 4]
 even_count = 0
 odd_count = 0
 negative_count = 0
@@ -361,7 +363,7 @@ prime_count = 0
 perfect_count = 0
 arm_count = 0
 palindrome_count = 0
-for i in l:
+for i in l1:
     fact = 0
     if i % 2 == 0:
         print("Even: ", i)
@@ -369,13 +371,13 @@ for i in l:
     else:
         odd_count += 1
         print("ODD: ", i)
-    if i < 0 :
+    if i < 0:
         negative_count += 1
         print("Negative: ", i)
     else:
         positive_count += 1
         print("Positive: ", i)
-    for j in range(2,i):
+    for j in range(2, i):
         if i % j == 0:
             fact = fact + j
     if fact == 0:
@@ -392,8 +394,10 @@ for i in l:
     if str_i == str_i[::-1]:
         palindrome_count += 1
         print("Palindrome: ", i)
-print(f"Even count: {even_count}, Odd count: {odd_count}, Positive Count: {positive_count}, Negative count: {negative_count},"
-      f"Prmie count: {prime_count}, Perfect count: {perfect_count}, Armstrong count: {arm_count}, Palindrome count: {palindrome_count}")
+print(f"Even count: {even_count}, Odd count: {odd_count}, Positive Count: {positive_count},"
+      f" Negative count: {negative_count},"
+      f"Prime count: {prime_count}, Perfect count: {perfect_count}, Armstrong count: {arm_count},"
+      f" Palindrome count: {palindrome_count}")
 
 # 57. Take a string from the user and find out how many digits are there, how many special symbols are there,
 # how many small letters are there, how many caps are there.
@@ -416,11 +420,10 @@ for i in string:
 print(f"Lower count: {lower_count}, Upper count: {upper_count}, Digit count: {digit_count}, Special count: {special_count}")
 
 
-
 # 58. Take a char from the user and find out how many number of occurrences are there in given string
 
 string = input("Enter a string: ")
-find_char = input(("Input the character to find: "))
+find_char = input("Input the character to find: ")
 char_count = 0
 for i in string:
     if i == find_char:
@@ -430,10 +433,10 @@ print(char_count)
 
 # 59. Take a element from the user and find out how many times the  element occurred in given list
 
-l = [122,23,44,44,55,667,4,44,44,44,56,67]
+ll = [122, 23, 44, 44, 55, 667, 4, 44, 44, 44, 56, 67]
 n = 44
 count = 0
-for i in l:
+for i in ll:
     if i == n:
         count += 1
 print(count)
@@ -441,17 +444,17 @@ print(count)
 # 60. Take a element from the user and find out how many number of occurrences are there in given tuple
 
 
-# 61. Reverse the string without effecting the special symbols. It involves three variations. Write code for three variations.
+# 61. Reverse the string without effecting the special symbols.
+# It involves three variations. Write code for three variations.
 # 62.Input: abc123,#$45def6%$^789$%^, output: $%^987%$^6fed54,#$321cba
 
 s = "abc123,#$45def6%$^789$%^"
 temp = s[::-1]
-print
 rev = ""
 temp1 = ""
 for i in temp:
 
-    if i.isalnum() == False:
+    if not i.isalnum():
         temp1 = temp1 + i
         continue
     temp1 = temp1[::-1]
@@ -460,10 +463,10 @@ for i in temp:
     if i.isalnum():
         rev = rev + i
         continue
-print("The expected reverse string is: ",rev)
+print("The expected reverse string is: ", rev)
 
 
-#63.Input: abc123,#$45def6%$^789$%^, output: 9876fe,#$d54321%$^cba$%^
+# 63.Input: "abc123,#$45def6%$^789$%^", output: "9876fe,#$d54321%$^cba$%^"
 
 s = "abc123,#$45def6%$^789$%^"
 temp = s[::-1]
@@ -492,7 +495,7 @@ for i in s:
         continue
     res += temp[::-1]
     temp = ""
-    if i.isalnum() == False:
+    if not i.isalnum():
         res += i
 print("The expexted string is: ", res)
 
